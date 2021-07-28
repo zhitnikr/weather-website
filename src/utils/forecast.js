@@ -11,10 +11,12 @@ const forecast = (lat, long, callback) => {
       const weatherDescription = body.current.weather_descriptions[0]
       const temperature = body.current.temperature
       const feelsLike = body.current.feelslike
+      const time = body.current.observation_time
       callback(undefined, {
         weatherDescription,
         temperature,
-        feelsLike
+        feelsLike,
+        time
       })
     }
   })
